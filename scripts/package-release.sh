@@ -7,6 +7,10 @@ APP_NAME="$(python3 "$META" get "$CHANNEL" appName)"
 ARCHIVE="$(python3 "$META" get "$CHANNEL" archive)"
 TAG="$(python3 "$META" get "$CHANNEL" tag)"
 PUBLIC_KEY="$(python3 "$META" get "$CHANNEL" publicKey)"
+SOURCE_COMMIT=""
+if git -C "$PROJECT_DIR" rev-parse HEAD >/dev/null 2>&1 && [[ -z "$(git -C "$PROJECT_DIR" status --porcelain)" ]]; then
+    SOURCE_COMMIT="$(git -C "$PROJECT_DIR" rev-parse HEAD)"
+fi
 OUTPUT="$PROJECT_DIR/build/distribution/$CHANNEL/$TAG"
 NOTES="$PROJECT_DIR/docs/notes/$TAG.md"
 if [[ ! -f "$NOTES" ]]; then
@@ -56,7 +60,7 @@ fi
 "$SPARKLE/bin/sign_update" --verify --account desknest-felixhui6791-art "$OUTPUT/appcast.xml"
 python3 "$PROJECT_DIR/scripts/verify-distribution.py" "$CHANNEL" "$OUTPUT"
 (cd "$OUTPUT" && shasum -a 256 "$ARCHIVE" > SHA256SUMS.txt)
-if git -C "$PROJECT_DIR" rev-parse HEAD >/dev/null 2>&1 && [[ -z "$(git -C "$PROJECT_DIR" status --porcelain)" ]]; then
-    git -C "$PROJECT_DIR" rev-parse HEAD > "$OUTPUT/source-commit.txt"
+if [[ -n "$SOURCE_COMMIT" && "$(git -C "$PROJECT_DIR" rev-parse HEAD)" == "$SOURCE_COMMIT" && -z "$(git -C "$PROJECT_DIR" status --porcelain)" ]]; then
+    printf '%s\n' "$SOURCE_COMMIT" > "$OUTPUT/source-commit.txt"
 fi
 printf '已生成并验证：%s\n' "$OUTPUT"
