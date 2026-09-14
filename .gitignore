@@ -1,0 +1,15 @@
+.DS_Store
+.build*/
+.swiftpm/
+build/
+*.xcuserstate
+xcuserdata/
+VERIFICATION.md
+.env
+.env.*
+*.p12
+*.p8
+*.pem
+*.key
+__pycache__/
+*.pyc

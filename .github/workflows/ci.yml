@@ -1,0 +1,21 @@
+name: Build and test
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift tests
+        run: swift test
+      - name: Validate distribution metadata
+        run: |
+          python3 scripts/distribution.py plist release /tmp/desknest-release.plist
+          python3 scripts/distribution.py plist beta /tmp/desknest-beta.plist
+          bash -n scripts/*.sh
+      - name: Build universal beta app
+        run: DESKNEST_UNIVERSAL=1 ./scripts/build-app.sh beta
