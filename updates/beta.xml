@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>栖桌 测试版</title>
+        <item>
+            <title>0.9.1-beta.1</title>
+            <pubDate>Mon, 14 Sep 2026 22:27:32 +0800</pubDate>
+            <link>https://github.com/felixhui6791-art/DeskNest/releases/tag/v0.9.1-beta.1</link>
+            <sparkle:version>90101</sparkle:version>
+            <sparkle:shortVersionString>0.9.1-beta.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[# 栖桌 0.9.1-beta.1 · 测试渠道
+
+首个独立测试版，基于 0.9.0 的功能，用于后续功能调整和验证。
+
+- 应用名称为“栖桌 测试版”，工作区保存在独立目录。
+- 仅接收测试版更新，正式用户不会收到此版本。
+- 包含检查更新按钮、自动提醒和经过签名验证的更新安装流程。
+
+支持 macOS 14+，Apple Silicon 与 Intel。当前版本尚未经过 Apple 公证。测试版与发布版可同时安装，使用菜单栏整理时建议只运行其中一个。
+]]></description>
+            <enclosure url="https://github.com/felixhui6791-art/DeskNest/releases/download/v0.9.1-beta.1/DeskNest-0.9.1-beta.1-universal.zip" length="3582231" type="application/octet-stream" sparkle:edSignature="BDxA8+t0K/q624YHrIOQntbXzouU03aU2KptyapqeJve0EastlW8WAWhGy8AUz+OW2jOryeGVbh0PfVTkU+hDw=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: N0llZJXjU6LvNWxj/c9ZVxqfNdfRWzI1UwMdUSRuNgDDgJ2xf1CvjSqbKXgyDAjUK9ADFQuUGbED+jwSBzWbBg==
+length: 1809
+-->
