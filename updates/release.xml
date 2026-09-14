@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>栖桌</title>
+        <item>
+            <title>0.9.0</title>
+            <pubDate>Mon, 14 Sep 2026 22:12:48 +0800</pubDate>
+            <link>https://github.com/felixhui6791-art/DeskNest/releases/tag/v0.9.0</link>
+            <sparkle:version>9000</sparkle:version>
+            <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[# 栖桌 0.9.0 · 首个公开发布版
+
+- 桌面文件分区、四周拉伸、吸附定位和原生组件避让。
+- 磨砂玻璃配色、背景透明度与可隐藏标题栏。
+- 菜单栏折叠面板、图标整理与休眠唤醒后自动恢复。
+- 小组件库：文件分区、内存使用和磁盘剩余空间。
+- 新增“检查更新”按钮和自动更新提醒，更新包通过签名验证。
+- 发布版和测试版使用独立应用、设置与更新渠道。
+
+支持 macOS 14+，Apple Silicon 与 Intel。当前下载采用临时签名，尚未经过 Apple 公证，首次打开可能需要在“系统设置 → 隐私与安全性”中选择“仍要打开”。旧版本没有内置更新，需要首次手动安装本版本。
+]]></description>
+            <enclosure url="https://github.com/felixhui6791-art/DeskNest/releases/download/v0.9.0/DeskNest-0.9.0-universal.zip" length="3578950" type="application/octet-stream" sparkle:edSignature="Yoij0HboQPTpEH3rxrrJ//x8dO9qXLPL3a7Z2VmbyNIamqvfB+pgkoWmEWydLO66igoZdBa+KT2dAjIS23P/Cw=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: c6DuzgfVgT31KiSbN7c9BFgiNEfIkto+nhFnPq0dnlg64aLOzx1zF0qJet9JNUA1PENXGONwU58AAC1SOQAnBA==
+length: 1976
+-->
