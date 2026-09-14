@@ -1,7 +1,9 @@
 import AppKit
 import CoreGraphics
 import OSLog
-import ScreenCaptureKit
+// Older SDKs do not annotate SCShareableContent as Sendable. Its windows stay
+// confined to this catalog's main-actor capture operation.
+@preconcurrency import ScreenCaptureKit
 
 struct MenuBarCatalogContext {
     let dividerFrame: CGRect
